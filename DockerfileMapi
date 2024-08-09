@@ -1,0 +1,13 @@
+FROM debian:11-slim
+
+ARG MAPI_TOKEN
+ENV MAPI_TOKEN=$MAPI_TOKEN
+
+# Install mapi
+RUN apt-get update -y && \
+    apt-get upgrade -y && \
+    apt-get install -y curl && \
+    curl --fail -L https://app.mayhem.security/cli/Linux/install.sh | sh && \
+    mkdir -p /usr/local/bin/ && \
+    install mapi /usr/local/bin/ && \
+    mapi login ${MAPI_TOKEN}
