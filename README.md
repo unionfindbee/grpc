@@ -2,7 +2,33 @@
 
 This demonstration is constructed following the guide available at https://grpc-ecosystem.github.io/grpc-gateway/docs/tutorials/introduction/.
 
-### Setup Requirements
+### Run the demo
+
+#### 1. Create a secrets file
+
+Create file called `.env` and inside of it put:  
+
+```
+MAPI_TOKEN=<Your Mayhem API Token>
+```
+
+#### 2. Build the demo
+
+Simply run:
+
+```
+make build
+```
+
+#### 3. Run the demo!
+
+Simply run:
+
+```
+make run
+```
+
+### Manual Setup Requirements
 
 #### 1. Required Software Installations
 - Ensure Go is installed: https://go.dev/doc/install
